@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="4;url=./login.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      align-items: top;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-repeat: no-repeat; /* Prevent the background image from repeating */
+      background-size: cover;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #video-call-container {
+      width: 600px;
+      background: linear-gradient(to bottom right, rgba(238, 0, 0, 0), #00000000);
+    border-radius: 10px;
+    padding-top: 200px;
+    }
+
+    .image{display: flex; justify-content: center;}
+    .image img{height: 20vh; width: 20vh; border-radius: 50%;}
+     
+
+     .des{ text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    } 
+    .des h1,
+    .des strong {
+    margin-bottom: 0; /* Set the bottom margin to zero */
+    color: rgb(255, 255, 255);
+    }
+    .des p{margin-bottom: 0; margin-top:20px; color: #e6dadaaf;}
+
+    .profile{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             background-color: rgba(255, 255, 255, 0.342);
+             border-radius: 20px;
+             padding: 5px;
+             width: fit-content;
+             text-align: center;
+             color: #000000bd;
+     }
+     .procon{display: flex; justify-content: center; margin-top: 20px;}
+
+    #call-controls {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #000000;
+      color: #fff;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    #call-controls button{ background-color: transparent; border: 0px;
+     font-size: 40px;
+    }
+    .swap{color: white;}
+    .video{color: white;}
+    .mic{color:white}
+    .hangup{color: red;}
+
+  </style>
+</head>
+<body>
+
+<video id="video" autoplay playsinline muted></video>
+
+<div id="video-call-container">
+  <div class="image">
+  <img src="https://raw.githubusercontent.com/petdoe/assets/main/2b18a006905c832da57cac41e0432aa7.jpg"/>
+  </div>
+  <div class="des">
+      <h1>Saba khan</h1>
+      <p>calling...</p>        
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="call-controls">
+    <a href="./video2.html"><button class="video"><i class="fas fa-video"></i></button></a>
+    <a href="./login.html"><button class="mic"><i class="fas fa-microphone"></i></button></a>
+    <a href="./login.html"><button class="swap"><i class="fas fa-sync-alt"></i></button></a>
+    <a href="./start.html"><button class="hangup"><i class="fas fa-phone-slash"></i></button></a>
+  </div>
+</div>
+
+<script>
+  // Get access to the camera
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      var video = document.getElementById('video');
+      video.srcObject = stream;
+    })
+    .catch(function (error) {
+      console.error('Error accessing the camera:', error);
+    });
+</script>
+
+</body>
+</html>

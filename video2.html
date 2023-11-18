@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <meta http-equiv="refresh" content="3;url=./login.html">
+  <style>
+    body {
+      display: flex;
+      align-items: top;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('https://raw.githubusercontent.com/petdoe/assets/main/2b18a006905c832da57cac41e0432aa7.jpg');
+      background-repeat: no-repeat; /* Prevent the background image from repeating */
+      background-size: cover;
+    }
+
+    video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #video-call-container {
+      width: 600px;
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.466), #ffffff5e);
+    border-radius: 10px;
+    padding-top: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.589), 0 4px 20px rgba(0, 0, 0, 0.589);
+  
+  /* Backdrop Filter for Blurry Effect */
+  backdrop-filter: blur(5px);
+    }
+
+    .image{display: flex; justify-content: center;}
+    .image img{height: 20vh; width: 20vh; border-radius: 50%;}
+     
+
+     .des{ text-align: center;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    } 
+    .des h1,
+    .des strong {
+    margin-bottom: 0; /* Set the bottom margin to zero */
+    color: rgb(0, 0, 0);
+    }
+    .des p{margin-bottom: 0; margin-top:20px; color: #1b0909af;}
+
+    .profile{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             background-color: rgba(255, 255, 255, 0.342);
+             border-radius: 20px;
+             padding: 5px;
+             width: fit-content;
+             text-align: center;
+             color: #000000bd;
+     }
+     .procon{display: flex; justify-content: center; margin-top: 20px;}
+
+    #call-controls {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      background-color: #000000;
+      color: #fff;
+      border-radius: 30px;
+  
+    }
+    #call-controls button{ background-color: transparent; border: 0px;
+     font-size: 40px;
+    }
+    .swap{color: white;}
+    .video{color: white;}
+    .mic{color:white}
+    .hangup{color: red;}
+
+  </style>
+</head>
+<body>
+
+<div id="video-call-container">
+  <div class="image">
+  <img src="https://raw.githubusercontent.com/petdoe/assets/main/2b18a006905c832da57cac41e0432aa7.jpg"/>
+  </div>
+  <div class="des">
+      <h1>Saba khan</h1>
+      <p>calling...</p>        
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div id="call-controls">
+      <a href="./video.html"><button class="video"><i class="fas fa-video-slash"></i></button></a>
+      <a href="./login.html"><button class="mic"><i class="fas fa-microphone"></i></button></a>
+      <a href="./login.html"><button class="swap"><i class="fas fa-sync-alt"></i></button></a>
+      <a href="./start.html"><button class="hangup"><i class="fas fa-phone-slash"></i></button></a>
+  </div>
+</div>
+
+</body>
+</html>

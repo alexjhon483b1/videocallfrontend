@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: top;
+            height: 100vh;
+        }
+
+        .login-container {
+            width: 100%;
+            background-color: #fff;
+            padding: 5px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text in the container */
+        }
+
+        .login-container h2 {
+            text-align: center;
+        }
+
+        .login-form {
+            width: 90%;
+            display: inline-block; /* Display the form as an inline block */
+            text-align: left; /* Align text to the left within the inline block */
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .form-group input {
+            width: 100%; /* Make input fields take up 100% width */
+            box-sizing: border-box; /* Include padding and border in the width */
+            padding: 12px;
+            font-size: 16px;
+            background-color: #f5f6f7;
+            border-radius: 4px;
+            border: 0px;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, 0.178), 0 4px 200px rgba(0, 0, 0, 0.199);
+        }
+
+        .loginbutton{width: 100%;
+         background-color: #1877f2;
+         color: #fff;
+         cursor: pointer;
+         border: 0px;
+         border-radius: 5px;
+         padding: 10px;
+         font-size: 16px;
+        }
+        .newaccountbutton{
+        width: 70%;
+        background-color: #1876f200;
+         color: #0f0d0d;
+         cursor: pointer;
+         border: 1px solid rgb(196, 194, 194);
+         border-radius: 5px;
+         padding: 10px;
+         font-size: 16px;
+        }
+        .forgot{color: #216fdb;}
+        .line{display: flex; justify-content: center;}
+        .meta{color: gray; margin-top: -20px; font-size: 13px;}
+        img{width: 100px; margin-top: 30px; margin-bottom: 25px;}
+        .imgcon{display: flex; justify-content: center;}
+
+        .error{color: red; display: flex; justify-content: center;}
+
+        .footer{color: black;display: flex; justify-content: center;}
+        ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+           }
+       .f{margin-top: 25px;padding: 25px;color: gray;}
+    </style>
+</head>
+<body>
+<div class="login-container">
+    <form class="login-form">
+        <div class="error" id="error"><p>Email phone number or password incorrect</p></div>
+        <div class="imgcon">
+        <img src="https://raw.githubusercontent.com/petdoe/assets/a73e2c784bb96709c4409bfa7c7078e872ae9d9c/logo.svg">
+        </div>
+        <div class="form-group">
+            <input type="text" required placeholder="Mobile number or email address">
+        </div>
+        <div class="form-group">
+            <input type="password" id="password" name="password" required placeholder="Password">
+        </div>
+        <div class="form-group">
+            <button class="loginbutton" onclick="showDiv()"> <strong>Log In</strong></button>
+        </div>
+    </form>
+    <p class="forgot">Forgotten password?</p>
+    <div class="line">
+    <p>or</p>
+    </div>
+    <button class="newaccountbutton">Create new account</button>
+    <div class="footer">
+         <ul class="f">
+            <li>English (UK)</li>
+            <li>বাংলা</li>
+            <li>অসমীয়া</li>
+            <li>हिन्दी</li>
+          </ul>
+          <ul class="f">
+            <li>नेपाली</li>
+            <li>
+                العربية
+            </li>
+            <li>中文(简体)</li>
+          </ul>
+    </div>
+    <p class="meta"> © 2023</p>
+</div>
+
+<script>
+    function showDiv() {
+
+    }
+</script>
+</body>
+</html>
