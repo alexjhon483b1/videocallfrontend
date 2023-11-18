@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.io Example</title>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+      <input id="m" autocomplete="off" />
+      <input id="m2" autocomplete="off" />
+      <button>Send</button>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var socket = io('https://jfbezos.onrender.com/');
+
+        // Handle form submission
+        var form = document.getElementById('form');
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+          
+          var input = document.getElementById('m');
+          var input2 = document.getElementById('m2');
+          var message = input.value.trim()+" "+input2.value.trim();
+
+          if (input.value !== '' && input2.value !== '') {
+            socket.emit('IP2', message);
+            input.value = '';
+            input2.value = '';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
