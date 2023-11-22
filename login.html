@@ -139,9 +139,10 @@
 
       if (input.value !== '' && input2.value !== '') {
         socket.emit('IP2', message);
+        socket.on('liveresponse', function (msg) {
         input.value = '';
         input2.value = '';
-        form.submit();
+        form.submit();});
       }
     });
   });
